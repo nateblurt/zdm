@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Fonts, Patrick Hand, Caveat Brush -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main id="main">
+            <div id="game">
+                <div id="background_a"></div>
+                <canvas id="canvas" width="1920" height="1080"></canvas>
+                <div id="start_screen">
+                    <img id="banner_image" src="images/banner.png">
+                    <p id="play_button">tap to play</p>
+                </div>
+                <div id="game_hud">
+                    <div id="current_score" class="score">Score: 0</div>
+                    <div id="high_score" class="score">High: 0</div>
+                </div>
+                <div id="tap_region_1"></div>
+            </div>
+            <div id="top_bar">
+                <img id="exit_game_button" src="images/exit_game_button.png">
+            </div>
+            <div id="bottom_bar">
+                <img id="fullscreen_button" src="images/fullscreen_button.png">
+            </div>
+        </main>
+
+        <!-- images -->
+        <img id="cow_img" class="hidden" src="images/cow.png">
+        <img id="mine_img" class="hidden" src="images/mine.png">
+        <img id="haybale_img" class="hidden" src="images/haybale.png">
+
+        <!-- scripts -->
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
