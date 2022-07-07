@@ -25,7 +25,7 @@ class Shooter {
                 type = 'mine';
             }
             console.log(type);
-            this.list.push({x:2000, y:Math.random()*1080,type:type,visible:true});
+            this.list.push({x:2000, y:Math.random()*900+90,type:type,visible:true});
             this.lastShot = _time;
             this.shotCount++;
         }
