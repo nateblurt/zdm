@@ -5,7 +5,7 @@ class Shooter {
         this.x = 500;
         this.y = 500;
         this.list = [];
-        this.speed = 10;
+        this.speed = 7.5;
         this.lastShot = 0;
         this.shotDelay = 400;
         this.hitbox = 42;
@@ -24,7 +24,6 @@ class Shooter {
             if(this.shotCount % this.foodFrequency) {
                 type = 'mine';
             }
-            console.log(type);
             this.list.push({x:2000, y:Math.random()*900+90,type:type,visible:true});
             this.lastShot = _time;
             this.shotCount++;

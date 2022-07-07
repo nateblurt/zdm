@@ -13,9 +13,11 @@ body {
     background-color:#391944;
 }
 #section_a {
+    visibility:hidden;
     background-color:#110712;
 }
 #section_b {
+    visibility:hidden;
     background-color:#391944;
 }
 #image_a {

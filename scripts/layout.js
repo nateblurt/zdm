@@ -106,6 +106,7 @@ function portrait() {
 }
 
 let lastWidth = 0, lastHeight = 0;
+let first_run = true;
 (function loop() {
     if(lastWidth != innerWidth || lastHeight != innerHeight) {
         lastWidth = innerWidth;
@@ -116,6 +117,11 @@ let lastWidth = 0, lastHeight = 0;
         else {
             portrait();
         }
+    }
+    if(first_run) {
+        section_a.style.visibility = 'visible';
+        section_b.style.visibility = 'visible';
+        first_run = false;
     }
     requestAnimationFrame(loop);
 })();

@@ -6,6 +6,7 @@ flutterkins_button.addEventListener('touchstart', open_flutterkins);
 function open_flutterkins() {
     setTimeout(()=> {
         game_popup.style.visibility = 'visible';
+        game_iframe.contentWindow.focus();
     },300);
 }
 

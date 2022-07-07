@@ -160,8 +160,10 @@ function all() {
 
 fullscreen_button.addEventListener('mousedown', GoFullscreen);
 fullscreen_button.addEventListener('touchstart', GoFullscreen);
-document.addEventListener('keydown', ()=> {
-    document.exitFullscreen();
+document.addEventListener('keydown', e=> {
+    if(e.key == 'Escape') {
+        document.exitFullscreen();
+    }
 });
 
 
@@ -170,6 +172,6 @@ function GoFullscreen() {
     setTimeout(()=>lastWidth=0,100);
 }
 function ExitFullscreen() {
-    document.requestFullscreen();
+    document.exitFullscreen();
     setTimeout(()=>lastWidth=0,100);
 }

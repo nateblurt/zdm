@@ -15,6 +15,12 @@ function tr1(e) {
 
 tap_region_1.addEventListener('touchstart', tr1, {passive:false});
 tap_region_1.addEventListener('mousedown', tr1, {passive:false});
+document.addEventListener('keydown', e=>{
+    console.log(e.key);
+    if(e.key == ' ') {
+        tr1(e);
+    }
+});
 
 exit_game_button.addEventListener('touchstart', ExitGame);
 exit_game_button.addEventListener('mousedown', ExitGame);
