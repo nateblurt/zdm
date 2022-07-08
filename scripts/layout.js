@@ -104,6 +104,10 @@ function portrait() {
     kofi_button.style.fontSize = kofi_button.offsetHeight * fr + 'px';
     kofi_button.style.lineHeight = kofi_button.offsetHeight + 'px';
 }
+function all() {
+    game_popup.style.width = innerWidth + 'px';
+    game_popup.style.height = innerHeight + 'px';
+}
 
 let lastWidth = 0, lastHeight = 0;
 let first_run = true;
@@ -111,6 +115,7 @@ let first_run = true;
     if(lastWidth != innerWidth || lastHeight != innerHeight) {
         lastWidth = innerWidth;
         lastHeight = innerHeight;
+        all();
         if(innerWidth > innerHeight) {
             landscape();
         }
