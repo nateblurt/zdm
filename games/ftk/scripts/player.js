@@ -4,7 +4,8 @@ import sound from './sound.js';
 
 class Player {
     constructor() {
-        this.img = cow_img;
+        //this.img = cow_img;
+        this.img = pig_img;
         this.alive = true;
         this.vx = 0;
         this.vy = 0;

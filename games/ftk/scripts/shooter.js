@@ -55,7 +55,8 @@ class Shooter {
             }
             else {
                 if(s.visible) {
-                    _context.drawImage(haybale_img, 0, 0, 160, 160, s.x-45, s.y-45, 90, 90);
+                    //_context.drawImage(haybale_img, 0, 0, 160, 160, s.x-45, s.y-45, 90, 90);
+                    _context.drawImage(apple_img, 0, 0, 160, 160, s.x-45, s.y-45, 90, 90);
                 }
             }
         }
