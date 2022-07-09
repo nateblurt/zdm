@@ -100,6 +100,10 @@ class Player {
         this.alive = false;
         shooter.shooting = false;
         sound.play('moo', 0.75);
+        if (this.score > this.highScore) {
+            this.highScore = this.score;
+            localStorage.highScore = this.highScore;
+        }
     }
     eat() {
         this.score++;
