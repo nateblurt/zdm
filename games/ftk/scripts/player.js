@@ -100,7 +100,8 @@ class Player {
         this.flap();
         this.alive = false;
         shooter.shooting = false;
-        sound.play('moo', 0.75);
+        //sound.play('moo', 0.75);
+        sound.play('oink', 0.75);
         if (this.score > this.highScore) {
             this.highScore = this.score;
             localStorage.highScore = this.highScore;
