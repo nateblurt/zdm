@@ -1,3 +1,4 @@
+import player from './player.js';
 let root = location.origin + '/games/ftk/audio/'
 let soundBuffers = {};
 let context = new AudioContext();

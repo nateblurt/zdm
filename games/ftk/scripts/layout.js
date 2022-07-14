@@ -89,6 +89,16 @@ function landscape() {
     bottom_bar.style.width = game.offsetWidth + 'px';
     bottom_bar.style.height = (128 / 1080) * game.offsetHeight + 'px';
     bottom_bar.style.left =  main.offsetWidth / 2 - bottom_bar.offsetWidth / 2 + 'px';
+
+    choose_cow.style.width = game.offsetHeight / 2 + 'px';
+    choose_cow.style.height = choose_cow.offsetWidth + 'px';
+    choose_pig.style.width = choose_cow.offsetWidth + 'px';
+    choose_pig.style.height = choose_cow.offsetHeight + 'px';
+
+    choose_cow.style.left = game.offsetWidth / 4 - choose_cow.offsetWidth / 2 + 'px';
+    choose_cow.style.top = game.offsetHeight / 2 - choose_cow.offsetHeight / 2 + 'px';
+    choose_pig.style.left = game.offsetWidth * 0.75 - choose_cow.offsetWidth / 2 + 'px';
+    choose_pig.style.top = game.offsetHeight / 2 - choose_cow.offsetHeight / 2 + 'px';
 }
 function portrait() {
     background_a.style.backgroundSize = `${game.offsetHeight * 16/9}px ${game.offsetHeight}px `;
@@ -120,6 +130,16 @@ function portrait() {
     bottom_bar.style.width = game.offsetWidth + 'px';
     bottom_bar.style.height = (128 / 1920) * game.offsetHeight + 'px';
     bottom_bar.style.left =  main.offsetWidth / 2 - bottom_bar.offsetWidth / 2 + 'px';
+
+    choose_cow.style.width = game.offsetWidth / 2 + 'px';
+    choose_cow.style.height = choose_cow.offsetWidth + 'px';
+    choose_pig.style.width = choose_cow.offsetWidth + 'px';
+    choose_pig.style.height = choose_cow.offsetHeight + 'px';
+
+    choose_cow.style.left = game.offsetWidth / 2 - choose_cow.offsetWidth / 2 + 'px';
+    choose_cow.style.top = game.offsetHeight * 0.25 - choose_cow.offsetHeight / 2 + 'px';
+    choose_pig.style.left = game.offsetWidth / 2 - choose_cow.offsetWidth / 2 + 'px';
+    choose_pig.style.top = game.offsetHeight * 0.75 - choose_cow.offsetHeight / 2 + 'px';
 }
 function wide_portrait() {
     main.style.height = innerHeight + 'px';
@@ -148,6 +168,10 @@ function tall_portrait() {
 function all() {
     main.style.left = innerWidth / 2 - main.offsetWidth / 2 + 'px';
     main.style.top = innerHeight / 2 - main.offsetHeight / 2 + 'px';
+    start_center.style.height = game.offsetHeight + 'px';
+    start_center.style.width = game.offsetHeight * 9/16 + 'px';
+    start_center.style.left = game.offsetWidth / 2 - start_center.offsetWidth / 2 + 'px';
+
     if(!document.fullscreenElement) {
         game.style.left = main.offsetWidth / 2 - game.offsetWidth / 2 + 'px';
         game.style.top = main.offsetHeight / 2 - game.offsetHeight / 2 + 'px';
@@ -174,4 +198,11 @@ function GoFullscreen() {
 function ExitFullscreen() {
     document.exitFullscreen();
     setTimeout(()=>lastWidth=0,100);
+}
+
+export default {
+    reset:()=>{
+        lastWidth = 0;
+        lastHeight = 0;
+    }
 }
