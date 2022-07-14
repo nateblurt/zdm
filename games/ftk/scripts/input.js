@@ -45,6 +45,7 @@ function ChooseCow() {
     shooter.food_img = haybale_img;
     layout.reset();
     customize_screen.style.visibility = 'hidden';
+    start_screen.style.visibility = 'visible';
 }
 function ChoosePig() {
     console.log('pig chosen');
@@ -53,4 +54,12 @@ function ChoosePig() {
     shooter.food_img = apple_img;
     layout.reset();
     customize_screen.style.visibility = 'hidden';
+    start_screen.style.visibility = 'visible';
+}
+ // Back to Character Selection
+back_to_selection.addEventListener('click', BackToSelection);
+
+function BackToSelection() {
+    customize_screen.style.visibility = 'visible';
+    start_screen.style.visibility = 'hidden';
 }

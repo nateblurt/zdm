@@ -41,6 +41,7 @@ main {
     width:100%;
     height:100%;
     text-align:center;
+    visibility:hidden;
 }
 #play_button {
     text-align: center;
@@ -113,4 +114,13 @@ main {
     width:100%;
     height:100%;
     background-color:orange;
+}
+#back_to_selection {
+    cursor:pointer;
+    z-index:101;
+    width:100%;
+    height:5vh;
+    line-height:5vh;
+    font-size:3vh;
+    background-color:rgba(0,0,0,0.25);
 }
