@@ -99,6 +99,8 @@ function landscape() {
     choose_cow.style.top = game.offsetHeight / 2 - choose_cow.offsetHeight / 2 + 'px';
     choose_pig.style.left = game.offsetWidth * 0.75 - choose_cow.offsetWidth / 2 + 'px';
     choose_pig.style.top = game.offsetHeight / 2 - choose_cow.offsetHeight / 2 + 'px';
+
+    choose_character.style.fontSize = game.offsetHeight * 0.1 + 'px';
 }
 function portrait() {
     background_a.style.backgroundSize = `${game.offsetHeight * 16/9}px ${game.offsetHeight}px `;
