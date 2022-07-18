@@ -1,3 +1,4 @@
+import player from './player.js';
 let root = location.origin + '/games/ftk/audio/'
 let soundBuffers = {};
 let context = new AudioContext();
@@ -15,6 +16,7 @@ class Sound {
         this.load('moo');
         this.load('flap');
         this.load('chomp');
+        this.load('oink');
     }
     flap() {
         if (!this.on)

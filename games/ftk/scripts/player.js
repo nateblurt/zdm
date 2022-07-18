@@ -4,7 +4,8 @@ import sound from './sound.js';
 
 class Player {
     constructor() {
-        this.img = cow_img;
+        this.img = pig_img;
+        this.character = 'cow';
         this.alive = true;
         this.vx = 0;
         this.vy = 0;
@@ -18,6 +19,18 @@ class Player {
 
         this.score = 0;
         this.loadHighScore();
+    }
+    choose(character) {
+        switch (character) {
+            case 'cow':
+                this.img = cow_img;
+                this.character = 'cow';
+                break;
+            case 'pig':
+                this.img = pig_img;
+                this.character = 'pig';
+                break;
+        }
     }
     physics() {
         if(this.active) {
@@ -99,7 +112,14 @@ class Player {
         this.flap();
         this.alive = false;
         shooter.shooting = false;
-        sound.play('moo', 0.75);
+        switch(this.character) {
+            case 'cow':
+                sound.play('moo', 0.75);
+                break;
+            case 'pig':
+                sound.play('oink', 0.75);
+                break;
+        }
         if (this.score > this.highScore) {
             this.highScore = this.score;
             localStorage.highScore = this.highScore;

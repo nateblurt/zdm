@@ -12,6 +12,7 @@ class Shooter {
         this.shotCount = 1;
         this.foodFrequency = 5;
         this.shooting = false;
+        this.food_img = apple_img;
     }
     reset() {
         this.shotCount = 1;
@@ -55,7 +56,7 @@ class Shooter {
             }
             else {
                 if(s.visible) {
-                    _context.drawImage(haybale_img, 0, 0, 160, 160, s.x-45, s.y-45, 90, 90);
+                    _context.drawImage(this.food_img, 0, 0, 160, 160, s.x-45, s.y-45, 90, 90);
                 }
             }
         }

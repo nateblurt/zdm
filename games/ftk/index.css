@@ -33,7 +33,7 @@ main {
     position:absolute;
     width:100%;
     height:100%;
-    background:url("images/desert.png");
+    background:url("images/farm.png");
     background-size:100%;
 }
 #start_screen {
@@ -41,6 +41,7 @@ main {
     width:100%;
     height:100%;
     text-align:center;
+    visibility:hidden;
 }
 #play_button {
     text-align: center;
@@ -108,4 +109,25 @@ main {
 }
 #bottom_bar {
     bottom:0px;
+}
+#customize_screen {
+    width:100%;
+    height:100%;
+    background-color:rgb(23, 11, 190);
+}
+#back_to_selection {
+    font-family:'Patrick Hand';
+    cursor:pointer;
+    z-index:101;
+    width:100%;
+    height:5vh;
+    line-height:5vh;
+    font-size:3vh;
+    background-color:rgba(0,0,0,0.25);
+}
+#choose_character {
+    font-family:'Patrick Hand';
+    color:white;
+    width:100%;
+    text-align:center;
 }
