@@ -116,6 +116,7 @@ main {
     background-color:rgb(23, 11, 190);
 }
 #back_to_selection {
+    font-family:'Patrick Hand';
     cursor:pointer;
     z-index:101;
     width:100%;
