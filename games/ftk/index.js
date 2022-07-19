@@ -10,6 +10,8 @@ let lastTime = 0;
 (function loop(time) { 
     window._time = time;
     window._delta = time - lastTime;
-    main();
     requestAnimationFrame(loop); 
+    if(time - lastTime < 16) return;
+    main();
+    lastTime = time;
 })();
